@@ -104,9 +104,9 @@ class EightPuzzleProblem(Problem):
     def __init__(self):
         # create a board then mess it up for end state
         # start_state = mess_up(start_state, ACTIONS, 10)
-        # start_state = tuple(map(tuple, np.array([[1, 2, 3], [4, 5, 6], [7, 0, 8]])))
         start_state = tuple(map(tuple, np.array([[0, 1, 2], [3, 4, 5], [6, 7, 8]])))
-        # start_state = tuple(map(tuple, np.array([[0, 2, 3], [4, 1, 5], [7, 8, 6]])))
+        # create a random puzzle configuration to test on
+        mess_up(start_state, ACTIONS, 30)
 
         goal_state = tuple(map(tuple, np.array([[1, 2, 3], [4, 5, 6], [7, 8, 0]])))
         super().__init__(start_state, goal_state)

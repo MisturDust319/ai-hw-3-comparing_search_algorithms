@@ -1,5 +1,5 @@
 import eight_puzzle
-from search import depth_limited_search, iterative_deepening_search, astar_search, EightPuzzle
+from search import iterative_deepening_search, astar_search
 from math import floor
 problem = eight_puzzle.EightPuzzleProblem()
 # problem = EightPuzzle((0, 1, 2, 3, 4, 5, 6, 7, 8))
@@ -32,5 +32,5 @@ def print_path(node):
     print(node.state[2])
 
 print_path(astar_search(problem, lambda n: manhattan_distance(n.state)))
-print_path(iterative_deepening_search(problem))
+# print_path(iterative_deepening_search(problem))
 # print(iterative_deepening_search(problem))
